@@ -7,23 +7,122 @@ body{
     grid-auto-rows: minmax(100px, auto);
     font-family: 'Lato', sans-serif;
 }
+
+/*---- HEADER ----*/
+#header{
+    color: #FFF;
+}
+#header .top{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.topleft{
+    font-size: 3em;
+    padding-left: 40px;
+    font-weight: 400;
+}
+.topleft span{
+    font-weight: bolder;
+}
+.topright{
+    font-size: 2em;
+    padding-top: 35px;
+    padding-right: 40px;
+    font-weight: 300;
+}
+.topcenter{
+    text-align: center;
+}
+.center{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.center h1{
+    font-size: 6em;
+    font-weight: 200;
+}
+.center p{
+    font-size: 2.3em;
+    font-weight: 300;
+}
+.center button{
+    font-size: 2.5em;
+    padding: 5px 60px 5px 60px;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
 #header img{
     grid-column: 1 / -1;
     max-width: 100%;
 }
 
+/*---- BODY ----*/
 #body{
     grid-column: 1 / -1;
     background: #FFF;
     padding: 60px;
 }
+#body p{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+#body .firstpara{
+    font-size: 3em;
+    font-weight: 300;
+    margin-bottom: 40px;
+    color: #afaeae;
+}
+#body .secondpara{
+    font-size: 2.3em;
+    font-weight: 300;
+    margin-bottom: 40px;
+    color: #afaeae;
+}
+.itemcircles{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
 .itemcircles img{
-    width: 350px;
+    width: 400px;
     height: auto;
     max-width: 100%;
 }
+.itembox1 h1{
+    text-transform: uppercase;
+    color: #F7931E;
+}
+.itembox1 p{
+    padding-bottom: 30px;
+}
+.itembox2 h1{
+    text-transform: uppercase;
+    color: #39B54A;
+}
+.itembox2 p{
+    padding-bottom: 30px;
+}
+.itembox3 h1{
+    text-transform: uppercase;
+    color: #662D91;
+}
+.itemcircles p{
+    font-size: 2em;
+    font-weight: 300;
+    max-width: 560px;
+}
 
-/* FORM */
+/*---- FORM ----*/
 #form{
     grid-column: 1 / -1;
     background: rgb(228, 226, 226);
@@ -78,7 +177,7 @@ textarea{
     outline: 0;
 }
 
-/* FIND US */
+/*---- FIND US ----*/
 #findus{
     grid-column: 1 / -1;
     background: #FFF;
@@ -110,24 +209,11 @@ textarea{
     margin: 0 auto;
     margin-bottom: 50px;
 }
-/* .map-responsive{
-    overflow:hidden;
-    padding-bottom:30%;
-    position:relative;
-    height:0;
-}
-.map-responsive iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
-    margin-top: 15px;
-} */
 .mapheader{
     background: #f2f2f2;
 }
-/* SOMETHINGBIG */
+
+/*---- SOMETHINGBIG ----*/
 #somthingbig{
     grid-column: 1 / -1;
     background: #8564a7;
@@ -188,7 +274,7 @@ button:focus{
     outline: 0;
 }
 
-/* FOOTER */
+/*---- FOOTER ----*/
 #footer{
     grid-column: 1 / -1;
     background: #f2f2f2;
@@ -199,12 +285,12 @@ button:focus{
     font-size: 1.4em;
     font-weight: 300;
 }
-.left{
+.bottomleft{
     margin-top: 70px;
     font-size: 1.8em;
     font-weight: 400;
 }
-.left span{
+.bottomleft span{
     font-weight: bolder;
 }
 #footer img{
@@ -213,8 +299,14 @@ button:focus{
     max-width: 100%;
 }
 
-/* MEDIA QUERIES */
+/*---- MEDIA QUERIES ----*/
 @media screen and (max-width: 1444px) {
+    #body .firstpara{
+        font-size: 2.5em;
+    }
+    #body .secondpara{
+        font-size: 1.8em;
+    }
     .mapheader{
         position: absolute;
         width: 100%;
@@ -238,6 +330,22 @@ button:focus{
     }
 }
 @media screen and (max-width: 1215px) {
+    #header .top{
+        display: none;
+    }
+    .center{ 
+        top: 20%;
+    }
+    .center h1{
+        font-size: 4em;
+    }
+    .center p{
+        font-size: 1.8em;
+    }
+    .center button{
+        font-size: 2em;
+        padding: 5px 50px 5px 50px;
+    }
     .mapheader{
         position: absolute;
         width: 100%;
@@ -262,6 +370,12 @@ button:focus{
     }
 }
 @media screen and (max-width: 1033px) {
+    #body .firstpara{
+        font-size: 2em;
+    }
+    #body .secondpara{
+        font-size: 1.5em;
+    }
     form .name, .email, textarea{
         display: flex;
         margin: 30px auto;
@@ -291,6 +405,19 @@ button:focus{
     }
 }
 @media screen and (max-width: 875px) {
+    .center{ 
+        top: 15%;
+    }
+    .center h1{
+        font-size: 3em;
+    }
+    .center p{
+        font-size: 1.3em;
+    }
+    .center button{
+        font-size: 1.5em;
+        padding: 5px 40px 5px 40px;
+    }
     #somthingbig{
         padding: 30px 0;
     }
@@ -299,6 +426,12 @@ button:focus{
     }
 }
 @media screen and (max-width: 661px) {
+    .center{ 
+        top: 15%;
+    }
+    .center button{
+        display: none;
+    }
     #form{
         padding-top: 0;
     }
@@ -322,11 +455,37 @@ button:focus{
     }
 }
 @media screen and (max-width: 598px) {
+    #body .firstpara{
+        font-size: 1.8em;
+    }
+    #body .secondpara{
+        font-size: 1.4em;
+    }
     .mapheader{
         font-size: 2.5vw;
     }
 }
+@media screen and (max-width: 545px) {
+    .center{ 
+        top: 10%;
+    }
+    .center p{
+       display: none;
+   }
+}
 @media screen and (max-width: 399px) {
+    .center{ 
+        top: 10%;
+    }
+    #body p{
+        width: 95%;
+    }
+    #body .firstpara{
+        font-size: 1.6em;
+    }
+    #body .secondpara{
+        font-size: 1.3em;
+    }
     .mapheader{
         height: 100px;
     }
